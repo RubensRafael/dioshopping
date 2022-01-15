@@ -6,7 +6,7 @@ import { Container } from '@material-ui/core/';
 import Header from './components/Header';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
-const darkTheme = createTheme({
+const darkTheme = createMuiTheme({
   palette: {
     mode: 'dark',
   },
