@@ -4,7 +4,7 @@ import store from './components/store';
 import Routes from './routes';
 import { Container } from '@material-ui/core/';
 import Header from './components/Header';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 
 const darkTheme = createTheme({
   palette: {
