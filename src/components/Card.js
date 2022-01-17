@@ -16,28 +16,28 @@ const Card = ({ product, children }) => {
     const classes = useStyles();
 
     return(
-        <Grid item xs={3}>
-            <Paper className={classes.paper}>
-                <Grid container direction='column'>
-                    <Grid item>
-                    <img width="140px" src={product.image} alt={product.name_product}/>
-                    <Typography variant='h6'>
-                        {children}
-                    </Typography>
-                    <Typography variant='subtitle1'>
-                        R$ {product.price.toFixed(2)}
-                    </Typography>
-                    </Grid>
+        <div style={{display: 'flex', flexDirection : 'column', maxWidth: '25%', alignItems: 'center'}}>
+         
                 
-                <Button 
-                    variant="contained"
+                    
+                    <img style={{objectFit: 'cover' , maxWidth : '140px'}}  src={product.image} alt={product.name_product}></img>
+                    <h6>
+                        {children}
+                    </h6>
+                    <p>
+                        R$ {product.price.toFixed(2)}
+                    </p>
+                    
+                
+                <button 
+                    
                     onClick={()=>dispatch(cartActions.Add(cart, product))}
                 >
                     Adicionar
-                </Button>
-                </Grid>
-            </Paper>
-        </Grid>
+                </button>
+                
+            
+        </div>
     )
 }
 

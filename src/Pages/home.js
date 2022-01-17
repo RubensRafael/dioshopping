@@ -55,7 +55,7 @@ const HomePage = () => {
                     }
                 )}
            </div>
-            <Grid container xs={9} spacing={3} className={classes.root}>
+            <div style={{width : '100%', display: 'flex', flexWrap: 'wrap'}} >
                 {products.map(item => {
                     return(
                         <Card
@@ -66,7 +66,7 @@ const HomePage = () => {
                         </Card>
                     )
                 })}
-            </Grid>
+            </div>
         </div>
     )
 }
