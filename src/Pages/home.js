@@ -55,7 +55,7 @@ const HomePage = () => {
                     }
                 )}
            </div>
-            <div style={{width : '100%', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}} >
+            <div style={{width : '100%', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'stretch'}} >
                 {products.map(item => {
                     return(
                         <Card
