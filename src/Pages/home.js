@@ -45,27 +45,16 @@ const HomePage = () => {
     }
 
     return(
-        <Grid container spacing={3} className={classes.root}>
-            <Grid item xs={3}>
-                <Paper className={classes.paper}>
-                    <Typography variant='h5'>
-                        Categorias
-                    </Typography>
-                    <List>
-                        {category.map(
-                            category => {
-                                return (
-                                    <Item
-                                        key = {category.id} 
-                                        name= {category.name}
-                                        details={count[category.name]}
-                                    />
-                                )
-                            }
-                        )}
-                    </List>
-                </Paper>
-            </Grid>
+        <div style={{display :'flex' , flexDirection : 'column', width : '100%' }} >
+           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent : 'space-between'}} >
+                {category.map(
+                    category => {
+                        return (
+                            <p  key={category.id}>{`${category.name }: ${ count[category.name] }`}</p>
+                        )
+                    }
+                )}
+           </div>
             <Grid container xs={9} spacing={3} className={classes.root}>
                 {products.map(item => {
                     return(
@@ -78,7 +67,7 @@ const HomePage = () => {
                     )
                 })}
             </Grid>
-        </Grid>
+        </div>
     )
 }
 
