@@ -16,25 +16,22 @@ const Card = ({ product, children }) => {
     const classes = useStyles();
 
     return(
-        <div style={{display: 'flex', flexDirection : 'column', maxWidth: '25%', alignItems: 'center', justifyContent: 'space-between'  , alignSelf: 'stretch', backgroundColor: 'blue', padding : "2px", borderRadius: '3px'  }}>
+        <div className='card-box'>
          
                 
                     
-                    <img style={{objectFit: 'cover', width: "100%" }}  src={product.image} alt={product.name_product}></img>
-                    <h6>
+                    <img className='card-image' src={product.image} alt={product.name_product}></img>
+                    <div className='my-card-text'>
                         {children}
-                    </h6>
-                    <p>
+                    </div>
+                    <div className='my-card-text' >
                         R$ {product.price.toFixed(2)}
-                    </p>
+                    </div>
                     
                 
-                <button 
-                    
-                    onClick={()=>dispatch(cartActions.Add(cart, product))}
-                >
-                    Adicionar
-                </button>
+                <div   className='card-button-box' onClick={()=>dispatch(cartActions.Add(cart, product))}>
+                    <div role='button' className='card-button'>Adicionar</div>
+                </div>
                 
             
         </div>

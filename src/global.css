@@ -1,0 +1,124 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	background-color: black;
+	color:  white;
+
+}
+
+.container{
+	display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.detail-list{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-bottom: solid #18B0F4 2px;
+    border-radius: 3px;
+}
+
+.item-list{
+	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    
+
+}
+
+.card-box{
+	display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 5px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border: solid #18B0F4 2px;
+    border-radius: 3px;
+
+}
+
+@media(max-width: 320px){
+	.card-box{
+		width: 40%;
+		margin: 0;
+	}
+}
+@media(max-width: 768px){
+	.card-box{
+		width: 30%;
+	}
+}
+.card-image{
+	object-fit: cover; 
+	width: 100%;
+}
+
+.my-card-text{
+	background-color: black;
+	color: white;
+	text-align: center;
+	width: 100%;
+}
+
+.card-button-box{
+	background-color: black;
+	color: blue;
+	text-align: center;
+	height: 45px;
+	width:  100%;
+	padding: 5px;
+}
+
+.card-button{
+	
+	color: #18B0F4;
+	text-align: center;
+	border-radius: 2px;
+	border: solid 2px #18B0F4;
+}
+.link > *{
+	color: #18B0F4;
+}
+
+/* SOBRESCREVENDO BOOTSTRAP  */
+
+.card-title {
+    margin-bottom: 0.5rem;
+    color: #18B0F4;
+}
+
+.card{
+	border: 1px solid #18B0F4;
+    border-radius: 2px;
+}
+
+.form-alert-ops > strong{
+	color: #664d03 !important;
+	background-color: #fff3cd !important;
+}
+
+.form-alert-ok > strong{
+	color: #0f5132 !important;
+	background-color: #d1e7dd !important;
+	
+}
+.btn-info{
+	background-color: #18B0F4;
+    border-color: #18B0F4;
+}
+.btn > span{
+	background-color: #18B0F4 !important;
+}
+
+i{
+	background-color: #18B0F4 !important;
+}

@@ -53,27 +53,32 @@ const Contatos = () => {
 
     return(
         <>
-            <Grid container direction="row" xs={12}>
-                <TextField id="name" label="Name" value={author} onChange={(event)=>{setAuthor(event.target.value)}} fullWidth/>
-                <TextField id="message" label="Message" value={content} onChange={(event)=>{setContent(event.target.value)}} fullWidth/>
-            </Grid>
+            <div class="input-group mb-3 mt-5">
+                <span class="input-group-text" id="inputGroup-sizing-default">Your Name or Email</span>
+                <input value={author} onChange={(event)=>{setAuthor(event.target.value)}} type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></input>
+                
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Your Message</span>
+                <input value={content} onChange={(event)=>{setContent(event.target.value)}} type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></input>
+            </div>
 
             {validator && 
-                <div className="alert alert-warning alert-dismissible fade show mt-2" role="alert">
+                <div className="form-alert-ops alert alert-warning alert-dismissible fade show mt-2" role="alert">
                     <strong>Por favor preencha todos os campos!</strong>
                     <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             }
 
-            {success && 
-                <div className="alert alert-success alert-dismissible fade show mt-2" role="alert">
+            {success  && 
+                <div className="form-alert-ok alert alert-success alert-dismissible fade show mt-2" role="alert">
                     <strong>Mensagem foi enviada</strong>
                 </div>
             }
 
-            <Button onClick={sendMessage} className="mt-2" variant="contained" color="primary">
+            <button onClick={sendMessage} className="btn btn-outline-primary">
                 Sent
-            </Button>
+            </button>
 
             {message.map((content) => {
                 return(

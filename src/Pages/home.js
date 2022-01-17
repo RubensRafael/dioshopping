@@ -45,8 +45,8 @@ const HomePage = () => {
     }
 
     return(
-        <div style={{display :'flex' , flexDirection : 'column', width : '100%' }} >
-           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent : 'space-between'}} >
+        <div className="container" >
+           <div className="detail-list" >
                 {category.map(
                     category => {
                         return (
@@ -55,7 +55,7 @@ const HomePage = () => {
                     }
                 )}
            </div>
-            <div style={{width : '100%', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'stretch'}} >
+            <div className="item-list"  >
                 {products.map(item => {
                     return(
                         <Card
