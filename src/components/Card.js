@@ -20,7 +20,7 @@ const Card = ({ product, children }) => {
          
                 
                     
-                    <img style={{objectFit: 'cover' }}  src={product.image} alt={product.name_product}></img>
+                    <img style={{objectFit: 'cover', width: "100%" }}  src={product.image} alt={product.name_product}></img>
                     <h6>
                         {children}
                     </h6>
