@@ -16,7 +16,7 @@ const Card = ({ product, children }) => {
     const classes = useStyles();
 
     return(
-        <div style={{display: 'flex', flexDirection : 'column', maxWidth: '25%', alignItems: 'center'}}>
+        <div style={{display: 'flex', flexDirection : 'column', maxWidth: '25%', alignItems: 'center', alignSelf: 'stretch'}}>
          
                 
                     
