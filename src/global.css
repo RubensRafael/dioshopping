@@ -80,11 +80,21 @@
 
 .card-button{
 	
-	color: #18B0F4;
+	background-color: #18B0F4;
+	color: black;
 	text-align: center;
 	border-radius: 2px;
-	border: solid 2px #18B0F4;
+	/*border: solid 2px #18B0F4;*/
 }
+
+.card-button:hover{
+	color: white;
+}
+.card-button:active{
+	background-color: black;
+	color: #18B0F4;
+}
+
 .link > *{
 	color: #18B0F4;
 }
