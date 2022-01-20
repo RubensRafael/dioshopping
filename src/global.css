@@ -85,6 +85,7 @@
 	text-align: center;
 	border-radius: 2px;
 	/*border: solid 2px #18B0F4;*/
+	transition: .2s;
 }
 
 .card-button:hover{
